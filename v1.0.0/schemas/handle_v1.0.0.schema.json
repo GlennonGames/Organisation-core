@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GlennonGames/Organisation/Core/names/handle_v1.0.0.schema.json",
+    "title": "Handle",
+    "description": "Defines a handle for a website like github.com and username. Not logon details! Notic display_name is used and not username.",
+    "type": "object",
+    "required": ["id", "display_name", "site"],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "pattern": "^.*handle_v\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.schema\\.json$"
+        },
+        "id": {
+            "type": "string",
+            "$ref": "id_v1.0.0.schema.json#/$defs/HandleId"
+        },
+        "display_name": {
+            "type": "string",
+            "pattern": "^(.*)+$"
+        },
+        "site": {
+            "$ref": "site_v1.0.0.schema.json"
+        }
+    }
+}

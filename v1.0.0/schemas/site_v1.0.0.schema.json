@@ -1,0 +1,11 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GlennonGames/Organisation/Core/names/site_v1.0.0.schema.json",
+    "title": "sites",
+    "description": "Enumerated supported sites",
+    "type": "string",
+    "additionalProperties": false,
+    "enum": [
+        "github"
+    ]
+}

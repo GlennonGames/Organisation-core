@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "GlennonGames/Organisation/Core/names/ids_v1.0.0.schema.json",
+  "title": "ID definitions",
+  "$defs": {
+    "NameId": {
+      "title": "Name ID",
+      "type": "string",
+      "anyOf": [
+        { "pattern": "^name-person-[a-z0-9]+$" },
+        { "pattern": "^name-team-[a-z0-9]+$" }
+      ]
+    },
+    "HandleId": {
+      "title": "Handle ID",
+      "type": "string",
+      "pattern": "^handle-[a-z0-9]+-[a-z0-9]+$"
+    },
+    "MemberId": {
+      "title": "Member ID",
+      "type": "string",
+      "pattern": "^member-[a-z0-9]+$"
+    },
+    "TeamId": {
+      "title": "Member ID",
+      "type": "string",
+      "pattern": "^member-[a-z0-9]+$"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "GlennonGames/Organisation/Core/names/name_v1.0.0.schema.json",
+    "title": "Name",
+    "description": "Defines the rules for name-xyz.json files",
+    "type": "object",
+    "required": ["id", "display"],
+    "additionalProperties": false,
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "pattern": "^.*name_v\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.schema\\.json$"
+        },
+        "id": {
+            "type": "string",
+            "$ref": "id_v1.0.0.schema.json#/$defs/NameId"
+        },
+        "full": {
+            "type": "string"
+        },
+        "given": {
+            "type": "string"
+        },
+        "family": {
+            "type": "string"
+        },
+        "other": {
+            "type": "string"
+        },
+        "patronymic": {
+            "type": "string"
+        },
+        "preferred": {
+            "type": "string"
+        },
+        "alternatives": {
+            "type": "array",
+            "items": { "type": "string" },
+            "uniqueItems": true
+        },
+        "display": {
+            "type": "string"
+        }
+    }
+}
